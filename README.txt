@@ -1,0 +1,1 @@
+Pengunaan diutamakan untuk menggunakan 1920x1280.
