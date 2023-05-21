@@ -17,8 +17,6 @@
 </head>
 
 <body>
-
-  <iframe src="https://www.youtube.com/embed/aMt80VClu4c?autoplay=1&mute=1&loop=1&modestbranding=1&rel=0&cc_load_policy=1&iv_load_policy=3&fs=0&color=white&controls=0&disablekb=1&playlist=aMt80VClu4c" width="560" height="315" title="KUAMBIL LAGI HATIKU - OFFICIAL TRAILER | 21 MARET 2019 DI BIOSKOP" frameborder="0"></iframe>
         <section class="header"> 
             <nav>
                 <a href="awal.html"><img src="https://cdn.discordapp.com/attachments/732930416830578743/1105478538565537902/Logo-PFN-color-02-white-300x143.png"></a>
@@ -33,9 +31,76 @@
                 <i class="fa-solid fa-bars" onclick="showMenu()"></i>
             </nav>
         <div class="text-box">
-            <h1>PFN TERBAAEEEK</h1>
-            <p>Jangan lupa untuk membuat deskripsi perusahaannya seperti mereka apa visi misi nya dan yang lain lain. <br> Jangan lupa untuk membuat yang lain lainnya juga</p>
-            <a href=""class="hero-btn">Visit Us To Know More</a>
+          <!DOCTYPE html>
+          <html>
+          <head>
+              <meta charset="UTF-8">
+              <meta name="viewport" content="with=device-width, initial-scale=1.0">
+              <link rel="stylesheet" href="style1.css">
+              <style></style>
+          </head>
+          <body> 
+          
+          <div class="container">
+          
+              <div class="slide-container active">
+                  <div class="slide">
+                      <div class="content">
+                          <h3>PFN</h3>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+                      </div>
+                      <video src="/images/4.mp4" muted autoplay loop></video>
+                  </div>
+              </div>
+          
+              <div class="slide-container">
+                  <div class="slide">
+                      <div class="content">
+                          <h3>PFN</h3>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+                      </div>
+                      <video src="/images/5.mp4" muted autoplay loop></video>
+                  </div>
+              </div>
+          
+              <div class="slide-container">
+                  <div class="slide">
+                      <div class="content">
+                          <h3>PFN</h3>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+                      </div>
+                      <video src="/images/6.mp4" muted autoplay loop></video>
+                  </div>
+              </div>
+          
+              <div id="next" onclick="next()"> > </div>
+              <div id="prev" onclick="prev()"> < </div>
+          
+          </div>
+          
+          <script>
+          let slides = document.querySelectorAll('.slide-container');
+          let index = 0;
+          
+          function next(){
+              slides[index].classList.remove('active');
+              index = (index + 1) % slides.length;
+              slides[index].classList.add('active');
+          }
+          
+          function prev(){
+              slides[index].classList.remove('active');
+              index = (index - 1 + slides.length) % slides.length;
+              slides[index].classList.add('active');
+          }
+          
+          
+          </script>
+          
+          
+          </body>
+          </html>
+          
         </div>
         <div class="inner-header flex"></div>
         <div>
@@ -56,48 +121,42 @@
 
 <!-- Studio -->
     <section class="game-section">
-        <h1 class="line-title">FILM PFN</h1>
+        <h1 class="line-title">CONTOH #1 KUMPULAN FILM PFN</h1>
         <div class="owl-carousel custom-carousel owl-theme">
         <div class="item active" style="background-image: url(https://ucarecdn.com/75d7700d-c102-40ff-9ba1-f0641444c616/dota2.jpg);">
         <div class="item-desc">
-          <h3>Dota 2</h3>
-          <p>Dota 2 is a multiplayer online battle arena by Valve. The game is a sequel to Defense of the
-            Ancients, which was a community-created mod for Blizzard Entertainment's Warcraft III.</p>
+          <h3>Contoh Film 1</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
         </div>
       </div>
       <div class="item" style="background-image: url(https://ucarecdn.com/2a5f69bc-befa-49f4-acc6-ab1dcae514c7/winter3.jpg);">
         <div class="item-desc">
-          <h3>The Witcher 3</h3>
-          <p>The Witcher 3 is a multiplayer online battle arena by Valve. The game is a sequel to Defense
-            of the Ancients, which was a community-created mod for Blizzard Entertainment's Warcraft III.</p>
+          <h3>Contoh Film 2</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
         </div>
       </div>
       <div class="item" style="background-image: url(https://ucarecdn.com/ec1918b1-2674-452c-bf61-8f73d8cc40c6/rdr2.jpg);">
         <div class="item-desc">
-          <h3>RDR 2</h3>
-          <p>RDR 2 is a multiplayer online battle arena by Valve. The game is a sequel to Defense of the
-            Ancients, which was a community-created mod for Blizzard Entertainment's Warcraft III.</p>
+          <h3>Contoh Film 3</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
         </div>
       </div>
       <div class="item" style="background-image: url(https://ucarecdn.com/6ba9052d-6105-4491-917b-e1a65b68f920/pubg.jpg);">
         <div class="item-desc">
-          <h3>PUBG Mobile</h3>
-          <p>PUBG 2 is a multiplayer online battle arena by Valve. The game is a sequel to Defense of the
-            Ancients, which was a community-created mod for Blizzard Entertainment's Warcraft III.</p>
+          <h3>Contoh Film 4</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
         </div>
       </div>
       <div class="item" style="background-image: url(https://ucarecdn.com/77598be3-c67f-40de-83d3-71a0f2f76c56/fortnite.jpg);">
         <div class="item-desc">
-          <h3>Fortnite</h3>
-          <p>Battle royale where 100 players fight to be the last person standing. which was a community-created mod
-            for Blizzard Entertainment's Warcraft III.</p>
+          <h3>Contoh Film 5</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
         </div>
       </div>
       <div class="item" style="background-image: url(https://ucarecdn.com/ed548880-32e4-42af-9d4e-632623903256/farcry5.jpg);">
         <div class="item-desc">
-          <h3>Far Cry 5</h3>
-          <p>Far Cry 5 is a 2018 first-person shooter game developed by Ubisoft.
-            which was a community-created mod for Blizzard Entertainment's Warcraft III.</p>
+          <h3>Contoh Film 6</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
         </div>
       </div>
     </div>
@@ -106,10 +165,10 @@
 
 <!-- Studio -->
 <section class="studio">
-    <h1>FILM FILM PFN</h1>
+    <h1>CONTOH #2 KUMPULAN FILM PFN</h1>
     <p>Kumpulan Short Movies yang berkerja sama dengan PFN</p>
 <class="film>
-    <div id="app" class="container">
+    <div id="app" class="container2">
         <card data-image="https://cdn.medcom.id/images/library/images/IMG_20190313_223841_015.jpg">
           <h1 slot="header">FILM LAYAR LEBAR</h1>
           <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -142,8 +201,8 @@
 <!-- Tempat -->
 
 <section class="tempat">
-    <h1>Our Place</h1>
-    <p>Kita bertempat disini disana dimana mana kami ada, kami melihat kamu dimana pun kamu berada dengan mata kami yang melihat kamu walaupoun kamu berdiri di belakang tembok</p>
+    <h1>Our Place (Butuh di bagusin lagi)</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
 
     <div class="row">
         <div class="tempat-col">
