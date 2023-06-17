@@ -1,12 +1,97 @@
 *{
     margin: 0;
-    padding: 0;
     font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+.header {
+  position:relative;
+  text-align:center;
+  background: #ffffff;
+  color:rgb(3, 3, 3);
+  min-height: 80vh;
+  width: 100%;
+  position: relative;
+  margin-top: -20px;
+}
+nav{
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+}
+nav img{
+  width: 150px;
+}
+.nav-links{
+  flex: 1;
+  text-align: right;
+}
+.nav-links ul li{
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+.nav-links ul li a{
+  color: #000000;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.nav-links ul li:after{
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #f44336;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+.nav-links ul li:hover:after{
+  width: 100%;
+}
+
+.inner-header {
+    height:75vh;
+    width:100%;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-btn{
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 12px 34px;
+  font-size: 13px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+  margin: 20px;
+}
+.hero-btn:hover{
+  border: 1px solid #f44336;
+  background: #f44336;
+  color: #fff;
+  transition: 1s;
+}
+nav .fa-solid{
+  display: none;
 }
 
 /* Video */
+.movie{
+  padding-top: 100px;
+}
 .container{
+  margin-top: -25px;
   position: relative;
+  width: 100%;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
 
 .container .slide-container .slide{
@@ -17,7 +102,7 @@
 .container .slide-container .slide video{
   position: absolute;
   align-items: center;
-  top: 155px;
+  top: 20px;
   left: 0;
   z-index: -1;
   height: 70%;
@@ -25,8 +110,10 @@
   object-fit: cover;
   object-position: center;
   animation: fadeIn .4s linear;
-  border-radius: 40px;
 }
+
+
+
 
 @keyframes fadeIn{
   0%{
@@ -34,9 +121,9 @@
   }
 }
 
+/* Permisalkan ingin di tambahkan di tengah video udah ada */
 .container .slide-container .slide .content{
-  top: 110px;
-  height: 763px;
+  height: 680px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -47,16 +134,16 @@
 
 .container .slide-container .slide .content h3{
   font-size: 60px;
-  color: #fff;
+  color: #15274d;
   text-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
   animation: animate .4s linear .4s backwards;
 }
 
 .container .slide-container .slide .content p{
-  font-size: 15px;
-  color: #eee;
+  font-size: 20px;
+  color: e#15274d;
   padding: 5px 0;
-  font-weight: lighter;
+  font-weight: bold;
   text-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
   max-width: 700px;
   animation: animate .4s linear .6s backwards;
@@ -78,7 +165,7 @@
 }
 
 /* Ini Arrow dalam Kotak, kalau mau ganti tinggal jadi next sama prev */
-.container #net,
+.container #nex,
 .container #pre{
   position: absolute;
   top: 50%;
@@ -101,7 +188,7 @@
   position: absolute;
   text-align: center;
   cursor: pointer;
-  top: 50%;
+  top: 35%;
   z-index: 100;
   transform: translateY(-50%);
   display: inline-block;
@@ -120,28 +207,6 @@
   left: 0;
 }
 
-body {
-  margin:0;
-}
-
-.header {
-  position:relative;
-  text-align:center;
-  background: #11131e;
-  color:white;
-  min-height: 100vh;
-  width: 100%;
-  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(https://cdn.discordapp.com/attachments/732930416830578743/1105094542102900816/Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg);
-  background-size: cover;
-  position: relative;
-}
-
-.inner-header {
-    height:75vh;
-    width:100%;
-    margin: 0;
-    padding: 0;
-}
 
 .flex { /*Flexbox for containers*/
   display: flex;
@@ -155,7 +220,7 @@ body {
   position:relative;
   width: 100%;
   height:20vh;
-  margin-bottom:-7px; /*Fix for safari gap*/
+  margin-bottom:-720px; /*Fix for safari gap*/
   min-height:100px;
   max-height:150px;
 }
@@ -164,7 +229,7 @@ body {
   position:relative;
   height:20vh;
   text-align:center;
-  background-color: white;
+  background-color: rgb(146, 0, 0);
 }
 
 /* Animation */
@@ -197,86 +262,11 @@ body {
   }
 }
 
-
-nav{
-    display: flex;
-    padding: 2% 6%;
-    justify-content: space-between;
-    align-items: center;
-}
-nav img{
-    width: 150px;
-}
-.nav-links{
-    flex: 1;
-    text-align: right;
-}
-.nav-links ul li{
-    list-style: none;
-    display: inline-block;
-    padding: 8px 12px;
-    position: relative;
-}
-.nav-links ul li a{
-    color: #fff;
-    text-decoration: none;
-    font-size: 13px;
-}
-
-.nav-links ul li:after{
-    content: '';
-    width: 0%;
-    height: 2px;
-    background: #f44336;
-    display: block;
-    margin: auto;
-    transition: 0.5s;
-}
-.nav-links ul li:hover:after{
-    width: 100%;
-}
-.text-box{
-    width: 90%;
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
-}
-.text-box h1{
-    font-size: 62px;
-}
-.text-box p{
-    margin: 10px 0 40px;
-    font-size: 14px;
-    color: white;  
-}
-.hero-btn{
-    display: inline-block;
-    text-decoration: none;
-    color: #fff;
-    border: 1px solid #fff;
-    padding: 12px 34px;
-    font-size: 13px;
-    background: transparent;
-    position: relative;
-    cursor: pointer;
-}
-.hero-btn:hover{
-    border: 1px solid #f44336;
-    background: #f44336;
-    transition: 1s;
-}
-nav .fa-solid{
-    display: none;
-}
-
 /******** Film *******/
 .game-section{
   margin: auto;
   text-align: center;
-  padding-top: 100px;
+  padding-top: 0;
 }
 .clear {
   clear: both;
@@ -321,9 +311,7 @@ h3 {
   font-size: 28px;
   line-height: 36px;
 }
-/******* Common Element CSS End *********/
 
-/* -------- title style ------- */
 .line-title {
   position: relative;
   width: 600px;
@@ -347,8 +335,6 @@ h3 {
   background: #e73700;
 }
 
-/******* Middle section CSS Start ******/
-/* -------- Landing page ------- */
 .game-section {
   padding: 60px 50px;
 }
@@ -421,227 +407,353 @@ h3 {
   z-index: 5;
 }
 
-/* Studio */
-.studio{
-  width: 50%;
+/* Kategori ke-2 */
+.game-section2{
   margin: auto;
   text-align: center;
-  padding-top: 10px;
+  padding-top: 0;
+}
+.clear {
+  clear: both;
+}
+img {
+  max-width: 100%;
+  border: 0px;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+}
+a:focus,
+a:active,
+a:visited,
+a:hover {
+  text-decoration: none;
+  outline: none;
+}
+a:hover {
+  color: #e73700;
+}
+.game-section2 h1{
+  margin-bottom: 48px;
+  padding-bottom: 16px;
+  font-size: 30px;
+  line-height: 28px;
+  font-weight: 700;
+  position: relative;
+  text-transform: capitalize;
 }
 
-.studio p{
-  font-size: 17px;
+h3 {
+  margin: 0 0 10px;
+  font-size: 28px;
+  line-height: 36px;
 }
 
-.film{
-    margin: 40px 0;
-    font-size: 14px;
-    font-weight: 500;
-    background-color: #fff;
-    -webkit-font-smoothing: antialiased;
-    width: 98vw;
-    height: 98vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.line-title {
+  position: relative;
+  width: 600px;
+  color: #000000;
+}
+.line-title::before,
+.line-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  border-radius: 2px;
+}
+.line-title::before {
+  width: 100%;
+  background: #f2f2f2;
+}
+.line-title::after {
+  width: 32px;
+  background: #e73700;
 }
 
-  
-  .title {
-    font-size: 24px;
-    font-weight: 700;
-    color: #5D4037;
-    text-align: center;
-  }
-  
-  p {
-    font-size: 12px;
-    line-height: 1.5em;
-  }
-  
-  h1 + p, p + p {
-    margin-top: 10px;
-  }
-  
-  .container2 {
-    padding: 40px 80px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .card-wrap {
-    margin: 10px;
-    transform: perspective(700px);
-    transform-style: preserve-3d;
-    cursor: pointer;
-  }
-  .card-wrap:hover .card-info {
-    transform: translateY(0);
-  }
-  .card-wrap:hover .card-info p {
-    opacity: 1;
-  }
-  .card-wrap:hover .card-info, .card-wrap:hover .card-info p {
-    transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-  }
-  .card-wrap:hover .card-info:after {
-    transition: 5s cubic-bezier(0.23, 1, 0.32, 1);
-    opacity: 1;
-    transform: translateY(0);
-  }
-  .card-wrap:hover .card-bg {
-    transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1), opacity 5s cubic-bezier(0.23, 1, 0.32, 1);
-    opacity: 0.8;
-  }
-  .card-wrap:hover .card {
-    transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 2s cubic-bezier(0.23, 1, 0.32, 1);
-    box-shadow: rgba(255, 255, 255, 0.2) 0 0 40px 5px, white 0 0 0 1px, rgba(0, 0, 0, 0.66) 0 30px 60px 0, inset #333 0 0 0 5px, inset white 0 0 0 6px;
-  }
-  
-  .card {
-    position: relative;
-    flex: 0 0 240px;
-    width: 240px;
-    height: 320px;
-    background-color: #333;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.66) 0 30px 60px 0, inset #333 0 0 0 5px, inset rgba(255, 255, 255, 0.5) 0 0 0 6px;
-    transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-  }
-  
-  .card-bg {
-    opacity: 0.6;
-    position: absolute;
-    top: -20px;
-    left: -20px;
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95), opacity 5s 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-    pointer-events: none;
-  }
-  
-  .card-info {
-    padding: 20px;
-    position: absolute;
-    bottom: 0;
-    color: #fff;
-    transform: translateY(40%);
-    transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
-  }
-  .card-info p {
-    opacity: 0;
-    text-shadow: black 0 2px 3px;
-    transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
-  }
-  .card-info * {
-    position: relative;
-    z-index: 1;
-  }
-  .card-info:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.6) 100%);
-    background-blend-mode: overlay;
-    opacity: 0;
-    transform: translateY(100%);
-    transition: 5s 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-  }
-  
-  .card-info h1 {
-    font-size: 20px;
-    font-weight: 700;
-    text-shadow: rgba(0, 0, 0, 0.5) 0 10px 10px;
-  }
-
-
-/* Tempat */
-
-.row{
-    margin-top: 5px;
-    display: flex;
-    justify-content: space-between;
+.game-section2 {
+  padding: 60px 50px;
 }
-.tempat{
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding-top: 50px;
+.game-section2 .owl-stage {
+  margin: 15px 0;
+  display: flex;
+  display: -webkit-flex;
+}
+.game-section2 .item {
+  margin: 0 15px 60px;
+  width: 500px;
+  height: 300px;
+  display: flex;
+  display: -webkit-flex;
+  align-items: flex-end;
+  -webkit-align-items: flex-end;
+  background: #343434 no-repeat center center / cover;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+.game-section2 .item.active {
+  width: 530px;
+  box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
+}
+.game-section2 .item:after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+}
+.game-section2 .item-desc {
+  padding: 0 24px 12px;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transform: translateY(calc(100% - 54px));
+  -webkit-transform: translateY(calc(100% - 54px));
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+}
+.game-section2 .item.active .item-desc {
+  transform: none;
+  -webkit-transform: none;
+}
+.game-section2 .item-desc p {
+  opacity: 0;
+  -webkit-transform: translateY(32px);
+  transform: translateY(32px);
+  transition: all 0.4s ease-in-out 0.2s;
+  -webkit-transition: all 0.4s ease-in-out 0.2s;
+}
+.game-section2 .item.active .item-desc p {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+.game-section2 .owl-theme.custom-carousel .owl-dots {
+  margin-top: -20px;
+  position: relative;
+  z-index: 5;
 }
 
-.tempat p{
-  font-size: 17px;
-}
-
-.tempat-col{
-    flex-basis: 32%;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    position: relative;
-    overflow: hidden;
-}
-.tempat-col img{
-    width: 100%;
-    display: block;
-}
-.layer{
-    background: transparent;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: 2s;
-}
-.layer:hover{
-    background: rgba(0.5, 0.5, 0.5, 0.5);
-}
-.layer h3{
-    width: 100%;
-    font-weight: 500;
-    color: #fff;
-    font-size: 26px;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    position: absolute;
-    opacity: 0;
-    transition: 0.5s;
-}
-.layer:hover h3{
-    bottom: 35%;
-    opacity: 1;
-}
-
-/* Call to Action */
-
+/* Contact Map & CTA*/
+/* -------- title style CTA------- */
 .cta{
-    margin: 100px auto;
-    width: 80%;
-    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(https://pfn.co.id/wp-content/uploads/2022/11/94-1080x593.png);
-    background-position: center;
-    background-size: cover;
-    border-radius: 10px;
-    text-align: center;
-    padding: 100px 0;
+margin: auto;
+text-align: center;
 }
 
-.cta h1{
+.line-title-cta {
+  margin-left: 660px;
+  font-size: 30px;
+  position: relative;
+  width: 600px;
+  color: #000000;
+}
+.line-title-cta::before,
+.line-title-cta::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  border-radius: 2px;
+}
+.line-title-cta::before {
+  width: 100%;
+  background: #f2f2f2;
+}
+.line-title-cta::after {
+  width: 32px;
+  background: #e73700;
+}
+
+.contact-in{
+  width: 80%;
+  height: auto;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  border-radius: 10px;
+  background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(https://pfn.co.id/wp-content/uploads/2023/05/pfn-baru-1.png);
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0px 0px 10px 0px #666;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.contact-map{
+  width: 100%;
+  height: auto;
+  flex: 50%;
+}
+
+.contact-map iframe{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  filter: grayscale(0.7) contrast(1.2) opacity(0.6)
+}
+
+.contact-form{
+  width: 100%;
+  height: auto;
+  flex: 50%;
+  padding: 30px;
+  text-align: center;
+}
+
+.contact-form h1{
     color: #fff;
     margin-bottom: 40px;
     padding: 0;
 }
 
+.contact-form h2{
+  width: 100%;
+  height: 130px;
+  color: #ca5d5d;
+  border: 1px solid #bcbcbc;
+  border-radius: 50px;
+  outline: none;
+  margin-bottom: 20px;
+  padding: 15px;
+}
+
+/* Footer */
+.container3{
+	max-width: 1170px;
+	margin:auto;
+}
+.row3{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: #24262b;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e73700;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li p{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col2{
+  width: 25%;
+  padding: 0 15px;
+}
+.footer-col2 h4{
+ font-size: 18px;
+ color: #ffffff;
+ text-transform: capitalize;
+ margin-bottom: 35px;
+ font-weight: 500;
+ position: relative;
+}
+.footer-col2 h4::before{
+ content: '';
+ position: absolute;
+ left:0;
+ bottom: -10px;
+ background-color: #e73700;
+ height: 2px;
+ box-sizing: border-box;
+ width: 50px;
+}
+.footer-col2 ul li:not(:last-child){
+ margin-bottom: 10px;
+}
+.footer-col2 ul li p{
+ font-size: 12px;
+ text-transform: capitalize;
+ color: #ffffff;
+ text-decoration: none;
+ font-weight: 300;
+ color: #bbbbbb;
+ display: block;
+ transition: all 0.3s ease;
+}
+
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
 
 @media(max-width: 700px) {
   .text-box h1{
